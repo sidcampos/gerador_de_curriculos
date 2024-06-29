@@ -1,0 +1,36 @@
+
+h2{
+    color:rgba(8, 8, 9, 0.718);
+    text-align: center;
+
+}
+p {
+    margin-top: 5px;
+    text-align: center;
+    color: #080908;
+}
+body {
+    font-family: Arial;
+    padding: 0;
+    margin: auto;
+    margin-top: 10px ;
+    background-color: hsl(0, 0%, 100%);
+    color: #ffffff;
+}
+hr {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}   
+input[type="submit"],
+button {
+    padding: 10px 15px;
+    margin: auto;
+    width: 10%;
+    margin-left: 45%;
+    border-bottom: #aeafae;
+    border-radius: 4px;
+    background-color: #aeafae;
+    color: rgb(3, 3, 3);
+    cursor: pointer;
+}

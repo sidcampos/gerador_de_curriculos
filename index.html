@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleshtml.css">
+    <title>Gerador de Currículo</title>
+    <script type="text/javascript">
+        function duplicar() {
+            var dup = document.getElementById("dup");
+            var newElement = document.createElement('div');
+            newElement.innerHTML = `
+                <label for="texto">Adicional:</label>
+                <input type="text" name="enviado[]">
+                <br>
+            `;
+            dup.appendChild(newElement);
+        }
+    </script>
+</head>
+<body>
+    <h1>Gerador de Currículos</h1>
+    <form method="POST" action="window_print.php">
+        
+        <h3>Dados Pessoais</h3>
+        <p><label for="idnome">Nome Completo</label></p>
+        <input type="text" name="nome" id="idnome" required>
+        <p><label for="idnascimento">Data de Nascimento</label></p>
+        <input type="date" name="nascimento" id="idnascimento" required>
+        <p><label for="idemail">E-Mail</label></p>
+        <input type="email" name="email" id="idemail"required>
+        <p><label for="idtelefone">Telefone</label></p>
+        <input type="text" name="telefone" id="idtelefone"required>
+        <p><label for="idendereco">Endereço</label></p>
+        <input type="text" name="endereco" id="idendereco"required>
+
+        <h3>Formação ou Escolaridade</h3>
+        <p><label for="idescolaridade">Escolaridade</label></p>
+        <input type="text" name="escolaridade" id="idescolaridade"required>
+
+        <div id="dup">
+            <p><label for="texto">Adicional:</label></p>
+            <input type="text" name="enviado[]">
+            <button type="button" onclick="duplicar()">Adicionar +</button>
+            <br>
+        </div>
+
+        <h3>Histórico Profissional</h3>
+        <p><label for="idempresa">Empresa:</label></p>
+        <input type="text" name="empresa" id="idempresa"required>
+        <p><label for="idcargo">Cargo:</label></p>
+        <input type="text" name="cargo" id="idcargo"required>
+        <p><label for="idperiodo">Período:</label></p>
+        <input type="text" name="periodo" id="idperiodo"required>
+
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
