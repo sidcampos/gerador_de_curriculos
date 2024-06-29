@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo Gerado</title>
-    <link rel="stylesheet" href="stylesphp.css">    
+    <link rel="stylesheet" href="stylesphp.css">  
+    <style>
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>  
     <script type="text/javascript">
         function imprimir() {
             window.print();
@@ -60,6 +67,8 @@
         echo "<p><strong>Período:</strong> $periodo</p>";
     }
     ?>
-      <input type="submit" onclick="imprimir()" value="Imprimir">
+    <div class="no-print">
+        <input type="submit" onclick="imprimir()" value="Imprimir">
+    </div>
 </body> 
 </html> <
